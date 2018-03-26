@@ -1,0 +1,34 @@
+[kerberos]
+mit01 ansible_host=192.168.60.152
+
+[windows]
+winAD01 ansible_host=192.168.60.151
+
+[test]
+hdptest ansible_host=192.168.60.162
+
+[repo]
+hdprepo  ansible_host=192.168.60.161
+
+#[master]
+#mstr01  ansible_host=192.168.60.160
+#mstr01  ansible_host=192.168.60.160
+[ambari]
+ambari
+
+[namenodes]
+nn01 ansible_host=192.168.60.160
+
+[secondarynamenode]
+snn01 ansible_host=192.168.60.161
+
+[datanodes]
+dn01  ansible_host=192.168.60.165
+dn02  ansible_host=192.168.60.166
+dn03  ansible_host=192.168.60.167
+
+[hdp:children]
+#master
+namenodes
+#slv
+datanodes
